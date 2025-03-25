@@ -1,47 +1,46 @@
 public class Main {
     public static void main(String[] args) {
-        AppMusical appMusical = new AppMusical();
-        AppTelefonico appTelefonico = new AppTelefonico();
-        AppWeb appWeb = new AppWeb();
+        Iphone iphone = new Iphone();
+
 
         System.out.println("Iniciando app musical");
 
-        appMusical.adicionarMusica(lista ->{
+        iphone.appMusical.adicionarMusica(lista -> {
             lista.add("Shake it off");
             lista.add("Dive");
             lista.add("Master of Puppets");
             lista.add("T.N.T");
         });
-        appMusical.exibirMusicas();
-        appMusical.tocarMusica("Shake it off");
-        appMusical.proximaMusica();
-        appMusical.pausarMusica("shake it off");
-        appMusical.removerMusicas("Dive");
-        appMusical.exibirMusicas();
+        iphone.appMusical.exibirMusicas();
+        iphone.appMusical.tocarMusica("Shake it off");
+        iphone.appMusical.proximaMusica();
+        iphone.appMusical.pausarMusica("shake it off");
+        iphone.appMusical.removerMusicas("Dive");
+        iphone.appMusical.exibirMusicas();
 
         System.out.println("==============fim===============");
         System.out.println("Iniciando app web");
 
-        appWeb.setUrl("www.youtube.com");
-        appWeb.exibirPag(appWeb.getUrl());
-        appWeb.atualizarPag();
-        appWeb.novaPag("www.facebook.com");
+        iphone.appWeb.setUrl("www.youtube.com");
+        iphone.appWeb.exibirPag(iphone.appWeb.getUrl());
+        iphone.appWeb.atualizarPag();
+        iphone.appWeb.novaPag("www.facebook.com");
         System.out.println("=========fim==============");
         System.out.println("Iniciando app telefonico:");
-        appTelefonico.adicionarContatos("Arnaldo", "1124258798");
-        appTelefonico.adicionarContatos("Maria", "1124258798");
-        appTelefonico.adicionarContatos("Jose", "1124657321");
-        appTelefonico.adicionarContatos("Arnaldo", "1131449875");
+        iphone.appTelefonico.adicionarContatos("Arnaldo", "1124258798");
+        iphone.appTelefonico.adicionarContatos("Maria", "1124258798");
+        iphone.appTelefonico.adicionarContatos("Jose", "1124657321");
+        iphone.appTelefonico.adicionarContatos("Arnaldo", "1131449875");
 
-        appTelefonico.exibirContatos();
+        iphone.appTelefonico.exibirContatos();
 
-        appTelefonico.ligar("1131449875");
-        appTelefonico.atender();
-        appTelefonico.iniciarCorreioVoz();
-        appTelefonico.removerContatos("Jose", "1124657321");
+        iphone.appTelefonico.ligar("1131449875");
+        iphone.appTelefonico.atender();
+        iphone.appTelefonico.iniciarCorreioVoz();
+        iphone.appTelefonico.removerContatos("Jose", "1124657321");
 
         System.out.println("Lista após remoção");
-        appTelefonico.exibirContatos();
+        iphone.appTelefonico.exibirContatos();
 
     }
 

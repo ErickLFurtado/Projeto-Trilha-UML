@@ -3,6 +3,9 @@ public class Iphone {
     private String marca;
     private  int bateria;
     private boolean ligado = false;
+    AppWeb appWeb;
+    AppTelefonico appTelefonico;
+    AppMusical appMusical;
 
 
 }
